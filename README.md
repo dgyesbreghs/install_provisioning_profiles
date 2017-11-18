@@ -1,6 +1,7 @@
 # install_provisioning_profiles plugin
 
 [![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-install_provisioning_profiles)
+[![CircleCI](https://circleci.com/gh/dgyesbreghs/install_provisioning_profiles.svg?style=shield)](https://circleci.com/gh/dgyesbreghs/install_provisioning_profiles)
 
 ## Getting Started
 
