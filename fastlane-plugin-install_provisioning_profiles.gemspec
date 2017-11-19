@@ -14,6 +14,9 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/dgyesbreghs/install_provisioning_profiles"
   spec.license       = "MIT"
 
+  # Only with ruby 2.0.x
+  spec.required_ruby_version = '~> 2.0'
+
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
