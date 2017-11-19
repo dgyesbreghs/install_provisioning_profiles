@@ -78,7 +78,7 @@ module Fastlane
           )
         ]
       end
-      
+
       def self.authors
         ["dgyesbreghs"]
       end
