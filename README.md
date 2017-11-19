@@ -17,6 +17,11 @@ Install all the provisioning profiles located in you're project.
 
 Just check in all the provisioning profiles needed to compile you're project, and we take care of the rest.
 
+You can override existing provisioning profiles by using the following options.
+```ruby
+install_provisioning_profiles(override_provisioning_profiles: true)
+```
+
 ## Example
 
 Check out the [example `Fastfile`](fastlane/Fastfile) to see how to use this plugin. Try it by cloning the repo, running `fastlane install_plugins` and `bundle exec fastlane test`.
