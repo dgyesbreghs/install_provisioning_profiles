@@ -1,3 +1,7 @@
 lane :test do
   install_provisioning_profiles
+
+  install_provisioning_profiles(
+    override_provisioning_profiles: true
+  )
 end
