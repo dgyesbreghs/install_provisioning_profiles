@@ -1,7 +1,7 @@
 lane :test do
+  # Use the default options
   install_provisioning_profiles
 
-  install_provisioning_profiles(
-    override_provisioning_profiles: true
-  )
+  # Set override_provisioning_profiles to true
+  install_provisioning_profiles(override_provisioning_profiles: true)
 end
