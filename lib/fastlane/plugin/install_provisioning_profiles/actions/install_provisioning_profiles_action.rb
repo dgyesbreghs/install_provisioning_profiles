@@ -1,4 +1,5 @@
 require 'fileutils'
+require 'shellwords'
 
 module Fastlane
   module Actions
@@ -42,7 +43,7 @@ module Fastlane
       end
 
       def self.retrieve_uuid(provisioning_profile)
-        `/usr/libexec/PlistBuddy -c 'Print :UUID' /dev/stdin <<< $(security cms -D -i #{provisioning_profile})`.gsub("\n", "")
+        `/usr/libexec/PlistBuddy -c 'Print :UUID' /dev/stdin <<< $(security cms -D -i #{provisioning_profile.shellescape})`.gsub("\n", "")
       end
 
       def self.uuid_exist(uuid)
