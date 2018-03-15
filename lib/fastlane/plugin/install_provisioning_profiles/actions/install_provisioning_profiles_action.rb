@@ -15,6 +15,12 @@ module Fastlane
           return
         end
 
+        path = File.expand_path("~") + "/Library/MobileDevice/Provisioning Profiles/"
+        # If the directory doesn't exist, create it first
+        unless File.directory?(path)
+          FileUtils.mkdir_p(path)
+        end
+
         provisioning_profiles.each do |provisioning_profile|
           # Show the provisioning profile basename
           UI.message("Provisioning Profile: #{File.basename provisioning_profile}")
@@ -43,6 +49,7 @@ module Fastlane
       end
 
       def self.retrieve_uuid(provisioning_profile)
+        UI.message("About to execute PLISTBuddy command")
         `/usr/libexec/PlistBuddy -c 'Print :UUID' /dev/stdin <<< $(security cms -D -i #{provisioning_profile.shellescape} 2> /dev/null)`.gsub("\n", "")
       end
 
