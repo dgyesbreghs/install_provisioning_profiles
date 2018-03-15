@@ -43,7 +43,7 @@ module Fastlane
       end
 
       def self.retrieve_uuid(provisioning_profile)
-        `/usr/libexec/PlistBuddy -c 'Print :UUID' /dev/stdin <<< $(security cms -D -i #{provisioning_profile.shellescape})`.gsub("\n", "")
+        `/usr/libexec/PlistBuddy -c 'Print :UUID' /dev/stdin <<< $(security cms -D -i #{provisioning_profile.shellescape} 2> /dev/null)`.gsub("\n", "")
       end
 
       def self.uuid_exist(uuid)
