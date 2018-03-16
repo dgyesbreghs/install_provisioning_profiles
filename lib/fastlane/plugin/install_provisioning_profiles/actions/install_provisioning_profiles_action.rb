@@ -15,7 +15,7 @@ module Fastlane
           return
         end
 
-        path = File.expand_path("~") + "/Library/MobileDevice/Provisioning Profiles/"
+        path = target_directory
         # If the directory doesn't exist, create it first
         unless File.directory?(path)
           FileUtils.mkdir_p(path)
