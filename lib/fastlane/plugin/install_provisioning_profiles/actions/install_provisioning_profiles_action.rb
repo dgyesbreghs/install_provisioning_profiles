@@ -49,7 +49,6 @@ module Fastlane
       end
 
       def self.retrieve_uuid(provisioning_profile)
-        UI.message("About to execute PLISTBuddy command")
         `/usr/libexec/PlistBuddy -c 'Print :UUID' /dev/stdin <<< $(security cms -D -i #{provisioning_profile.shellescape} 2> /dev/null)`.gsub("\n", "")
       end
 
