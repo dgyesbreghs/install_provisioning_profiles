@@ -13,9 +13,9 @@ fastlane add_plugin install_provisioning_profiles
 
 ## About install provisioning profiles
 
-Install all the provisioning profiles located in you're project.
+Install all the provisioning profiles located in your project directory.
 
-Just check in all the provisioning profiles needed to compile you're project, and we take care of the rest.
+Just check in all the provisioning profiles needed to compile your project, and we take care of the rest.
 
 You can override existing provisioning profiles by using the following options.
 ```ruby
